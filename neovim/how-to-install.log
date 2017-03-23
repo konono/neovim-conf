@@ -1,0 +1,26 @@
+# Install linuxbrew
+echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >>~/.zshrc
+echo 'export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"' >>~/.zshrc
+echo 'export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"' >>~/.zshrc
+sudo apt install -y ruby
+sudo apt install -y curl
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+source ~/.zshrc
+
+# Install neovim for linuxbrew
+brew tap neovim/neovim
+brew install neovim
+mkdir -p ~/.config/
+ln -s PATH/TO/DIR/nvim ~/.config/nvim
+sudo apt-get install x11-common x11-utils x11-xserver-utils
+sudo apt-get install xclip xsel
+sudo apt install python2.7
+sudo apt install python2.7-dev
+sudo apt install python3-dev
+sudo apt install python-setuptools
+sudo apt install python3-setuptools
+sudo easy_install3 pip
+sudo easy_install pip
+sudo pip3 install neovim
+sudo pip2 install neovim
+nvim +":UpdateRemotePlugins " +:q
